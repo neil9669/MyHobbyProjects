@@ -26,6 +26,7 @@ When Windows reboots, Ubuntu should continue to install in a Terminal window. Th
 You are now in a Bash terminal in a Linux Ubuntu virtual environment (black window).  Leave this window open and open another Powershell window as Administrator and check your wsl installation.  Type the following in Powershell >:
 
 >wsl -l -v
+
   NAME      STATE           VERSION
 * Ubuntu    Running         2
 
@@ -54,5 +55,18 @@ Allow Docker Desktop to install.
 Finally Close and log out of Windows to complete the installation.
 
 Log back in to Windows and allow install to continue, accept Docker terms and conditions and wait for it to load up.  Skip the next details or, fill in the form if you prefer.  Wait until the Docker engine starts.  Be patient, this can take a while.
+
+When promted paste your repository url to clone it locally.  At the bottom right of VSCode window you will see Starting Dev Container (show log) - click the link to see the build progress in the Terminal... It takes about 10 minutes to complete.
+
+When complete hit the + symbol next to Dev containers to add a Bash shell.  Here you can add git commands just like in GitPod.  Try the python3 -m http.server command.  This time you page opens in a localhost browser.
+
+To push files to your remote repository you can add global config settings to default your elocal environment.
+
+git config --global user.email "your github email"
+git config --global user.name "your github name"
+
+When you do git push you'll be prompted for a password
+
+This is a useful video that gives more generic information on setting up development environments using VSCode, WSL and Docker https://www.youtube.com/watch?v=SDa3v4Quj7Y 
 
 
