@@ -50,7 +50,7 @@
   <strong>>wsl --install
   
 </strong></p>
-<p><img src="assets/images/1-install-wsl2023-04-25-200812.png" width="488" height="307"></p>
+<p><img src="../assets/images/ci_vscode_setup/1-install-wsl2023-04-25-200812.png" widSth="488" height="307"></p>
 <p>Accept and allow any prompts.  <br>
   When complete, restart Windows to download and configure further updates.
   
@@ -67,17 +67,17 @@
 <p>NAME      STATE           VERSION
   <br>
   * Ubuntu    Running         2</p>
-<p><img src="assets/images/3-install.PNG" width="579" height="151"> </p>
+<p><img src="../assets/images/ci_vscode_setup/3-install.PNG" width="579" height="151"> </p>
 <p>Version 2 confirms wsl2 is installed  </p>
  <h3>Now install VSCode   </h3>
  <p>In Powershell as Admistrator type >:<br>
    <strong>>choco install vscode -y</strong></p>
  <p>#INSERT IMAGE powershell</p>
  <p>Open VSCode</p>
- <p><img src="assets/images/4VSCode.PNG" width="821" height="705"></p>
+ <p><img src="../assets/images/ci_vscode_setup/4VSCode.PNG" width="821" height="705"></p>
  <p>&nbsp;</p>
  <p>then press ctrl shift and p</p>
- <p><img src="assets/images/4VSCode2.PNG" width="818" height="705"></p>
+ <p><img src="../assets/images/ci_vscode_setup/4VSCode2.PNG" width="818" height="705"></p>
  <p><br>
    Look for the <strong>Remote: Development Extensions pack</strong> and select it
    then install from the left hand panel:
@@ -88,25 +88,25 @@
    Remote ssh - install
    <br>
    Github Codespaces - install </strong></p>
- <p><img src="assets/images/5VScode.PNG" width="419" height="706"></p>
+ <p><img src="../assets/images/ci_vscode_setup/5VScode.PNG" width="419" height="706"></p>
  <p>&nbsp;</p>
  <p>Press ctrl shift and p again and look for </p>
  <p><strong>Dev containers: clone repository in container volume</strong> and accept all defaults: got it and install   </p>
- <p><img src="assets/images/5VScode.PNG" width="419" height="706"></p>
+ <p><img src="../assets/images/ci_vscode_setup/5VScode.PNG" width="419" height="706"></p>
  <p>Allow Docker Desktop to install.
    
    Finally Close and log out of Windows to complete the installation.   </p>
- <p><img src="assets/images/7dockerInstall.PNG" width="360" height="145"></p>
- <p><img src="assets/images/8Docker install.PNG" width="707" height="493"></p>
+ <p><img src="../assets/images/ci_vscode_setup/7dockerInstall.PNG" width="360" height="145"></p>
+ <p><img src="../assets/images/ci_vscode_setup/8Docker-install.PNG" width="707" height="493"></p>
  <p>Log back in to Windows and allow install to continue, accept Docker terms and conditions and wait for it to load up.  </p>
- <p><img src="assets/images/9Dockerterms.PNG" width="631" height="417"></p>
+ <p><img src="../assets/images/ci_vscode_setup/9Dockerterms.PNG" width="631" height="417"></p>
  <p>Skip the next details or, fill in the form if you prefer. </p>
  <p>#ADD IMAGE HERE</p>
  <p><br>
    Wait until the Docker engine starts.  Be patient, this can take a while. </p>
  <p>##ADD IMAGE HERE</p>
  <p>Back in VSCode Press ctrl shift and p again and select<strong>Dev containers: clone repository in container volume</strong> again. This time, when promted, paste your repository url to clone it locally.  </p>
- <p>#ADD IMAGE HERE</p>
+ <p><img src="../assets/images/ci_vscode_setup/VSCodeClone.PNG"></p>
  <p>At the bottom right of VSCode window you will see:</p>
  <p><strong>Starting Dev Container (show log)</strong> - click the link to see the build progress in the Terminal... It takes about 10 minutes to complete.
    
