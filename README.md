@@ -1,35 +1,11 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# My Pojects Website
 
-Welcome,
+Primarily this site is developed with the intention of documenting project that I'm interested in and have completed.  It provides an account of what I did to complete the projects and to document any issues experinced along the way.  So often, I complete a project but then later forget how I achieved the result so do it again.  Inevitably, each project has it's own unique obstacles to overcome and almost always requires some tweeking to make it work.
 
-This is the Code Institute student template for Codeanywhere. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+On a broader level I'm hoping that it will provide a useful resourse to others who are interested in completing the similar projects of their own.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **March 3rd, 2023**
+Initially, my first artcle was to be a tutorial on setting up a security camera using Docker on a headless Debian 11 server.  However, I decided that a far more relevant, timely and useful tutorial would be create VSCode local development environment that specifically used the Code Instute recommended template.  This would answer the question that many students posted in the CI Slack channel: "How do I setup a local VSCode dev environment?" 
 
-## Codeanywhere Reminders
+![Responsice Mockup](media/love_running_mockup.png)
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
-
-`python3 -m http.server`
-
-A button should appear to click: _Open Preview_ or _Open Browser_.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A button should appear to click: _Open Preview_ or _Open Browser_.
-
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
----
-
-Happy coding!
+## Features 
