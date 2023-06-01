@@ -1,127 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.6.0/sandstone/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+<title>My Projects Website</title>
 </head>
 <body>
-<h2>Preamble
-</h2>
-<p>This is a quick walkthrough to setup a local development environment in Windows, for the Code Institute  Diploma in Full Stack Web Development.  </p>
-<p>This environment is not strictly necessary as all the IDE tools are available online however, it does provide a useful exercise for the more adventurous and a 'plan b' should there be any connectivity issues.
-</p>
-<p>This article will provide the content for my milestone project 1 and is currenly in draft.
-</p>
-<p>For the purpose of the course I have installed a clean build of the latest version of Windows10.  This is not strictly necessary but does remove the clutter of previous installations and a task I perform regularly anyway.  I won't go into detail about the installation as it is well documented in Google.
-</p>
-<p>After installing all the latest updates I put the minimum software on that use regularly.  I use Chocolately to manage this as it is a great package manger for windows and all installations can be done from a few command lines</p>
-<h2> Prerequistes
-</h2>
-<p>Your GitHub repository URL with CI Template provisioned from <a href="https://github.com/Code-Institute-Org/gitpod-full-template">https://github.com/Code-Institute-Org/gitpod-full-template</a> </p>
-<p>Windows Subsystem for Linux - WSL2 is the latest and improved version.
-</p>
-<p>Python3</p>
-<p>VSCode - plus Remote, Docker and git extensions</p>
-<h2>Let's Do It<br>
-</h2>
-<p>Optional step to install to install Chocolately. This can skipped and required applications can be downloaded and installed manually.</p>
-<p>To install chocolatey open a Powershell terminal as Administrator type the following &gt;:</p>
-<p>ensure Get-ExecutionPolicy is not Restricted</p>
-<p>&gt;Get-ExecutionPolicy</p>
-<p>#INSERT IMAGE</p>
-<p>if result is Restricted then run</p>
-<p>&gt;Set-ExecutionPolicy AllSigned</p>
-<p>#INSERT IMAGE</p>
-<p>Install Chocolatey with the following command </p>
-<p>&gt;Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))</p>
-<p>#INSERT IMAGE</p>
-<p>More details and apps are available at the website https://community.chocolatey.org/packages</p>
-<p>You may need to close and re-open Powershell as Administrator if you encounter any errors when trying to install packages.</p>
-<p>Now install your required applications.  Mine is as follows:</p>
-<p>&gt;choco install firefox googlechrome 7zip teamviewer winscp slack ventoy putty git github-desktop postman -y</p>
-<p>#INSERT IMAGE</p>
-<h3> Install WSL
-</h3>
-<p>If you are running Windows 10 version 2004 and higher (Build 19041 and higher) or Windows 11, installation is much simpler.  I'm using Windows 10 Home 22H2 19045.2728 at time of writing.  More information can be found at <a href="https://learn.microsoft.com/en-us/windows/wsl/install">https://learn.microsoft.com/en-us/windows/wsl/install</a> if these instructions don't work for you.
-</p>
-<p>Open Powershell as Administrator and enter the following:<br>
-  <strong>>wsl --install
-  
-</strong></p>
-<p><img src="../assets/images/ci_vscode_setup/1-install-wsl2023-04-25-200812.png" widSth="488" height="307"></p>
-<p>Accept and allow any prompts.  <br>
-  When complete, restart Windows to download and configure further updates.
-  
-    <br>
-  When Windows reboots, Ubuntu should continue to install in a Terminal window. This may take a few minutes but, when complete you'll you'll be asked to enter a new UNIX username.  <br>
-  This will be specifically for Ubuntu and not related to your Windows login.  I entered neil and created a new password when prompted.
-  
-  <br>
-  You are now in a Bash terminal in a Linux Ubuntu virtual environment (black window).  Leave this window open and open another Powershell window as Administrator and check your wsl installation.  </p>
-<p>Type the following in Powershell >:<br>
-  <strong>>wsl -l -v
-  
-  </strong></p>
-<p>NAME      STATE           VERSION
-  <br>
-  * Ubuntu    Running         2</p>
-<p><img src="../assets/images/ci_vscode_setup/3-install.PNG" width="579" height="151"> </p>
-<p>Version 2 confirms wsl2 is installed  </p>
- <h3>Now install VSCode   </h3>
- <p>In Powershell as Admistrator type >:<br>
-   <strong>>choco install vscode -y</strong></p>
- <p>#INSERT IMAGE powershell</p>
- <p>Open VSCode</p>
- <p><img src="../assets/images/ci_vscode_setup/4VSCode.PNG" width="821" height="705"></p>
- <p>&nbsp;</p>
- <p>then press ctrl shift and p</p>
- <p><img src="../assets/images/ci_vscode_setup/4VSCode2.PNG" width="818" height="705"></p>
- <p><br>
-   Look for the <strong>Remote: Development Extensions pack</strong> and select it
-   then install from the left hand panel:
-   
-   (wsl should already have installed)<br>
-   <strong>Dev Containers - install
-   <br>
-   Remote ssh - install
-   <br>
-   Github Codespaces - install </strong></p>
- <p><img src="../assets/images/ci_vscode_setup/5VScode.PNG" width="419" height="706"></p>
- <p>&nbsp;</p>
- <p>Press ctrl shift and p again and look for </p>
- <p><strong>Dev containers: clone repository in container volume</strong> and accept all defaults: got it and install   </p>
- <p><img src="../assets/images/ci_vscode_setup/5VScode.PNG" width="419" height="706"></p>
- <p>Allow Docker Desktop to install.
-   
-   Finally Close and log out of Windows to complete the installation.   </p>
- <p><img src="../assets/images/ci_vscode_setup/7dockerInstall.PNG" width="360" height="145"></p>
- <p><img src="../assets/images/ci_vscode_setup/8Docker-install.PNG" width="707" height="493"></p>
- <p>Log back in to Windows and allow install to continue, accept Docker terms and conditions and wait for it to load up.  </p>
- <p><img src="../assets/images/ci_vscode_setup/9Dockerterms.PNG" width="631" height="417"></p>
- <p>Skip the next details or, fill in the form if you prefer. </p>
- <p>#ADD IMAGE HERE</p>
- <p><br>
-   Wait until the Docker engine starts.  Be patient, this can take a while. </p>
- <p>##ADD IMAGE HERE</p>
- <p>Back in VSCode Press ctrl shift and p again and select<strong>Dev containers: clone repository in container volume</strong> again. This time, when promted, paste your repository url to clone it locally.  </p>
- <p><img src="../assets/images/ci_vscode_setup/VSCodeClone.PNG"></p>
- <p>At the bottom right of VSCode window you will see:</p>
- <p><strong>Starting Dev Container (show log)</strong> - click the link to see the build progress in the Terminal... It takes about 10 minutes to complete.
-   
-   When complete hit the + symbol next to Dev containers to add a Bash shell.  
-   Here you can add git commands just like in GitPod.  </p>
- <p>#ADD IMAGE HERE</p>
- <p>Try the <strong>python3 -m http.server</strong> command.  This time you page opens in a localhost browser. </p>
- <p>To push files to your remote repository you can add global config settings to default your elocal environment.   </p>
- <p><strong>&gt; git config --global user.email "your github email"
-  <br>
-  &gt; git config --global user.name "your github name"
-   
-  </strong></p>
- <p>When you do git push you'll be prompted for a password
-   
-   This is a useful video that gives more generic information on setting up development environments using VSCode, WSL and Docker <a href="https://www.youtube.com/watch?v=SDa3v4Quj7Y">https://www.youtube.com/watch?v=SDa3v4Quj7Y</a></p>
+    <section id="Homepage">
+        <h2 id="welcome">Welcome to My Projects Site.</h2>
+        <div id="left-home">
+            <div class="left-home-heading">
+                <h2>New Article <i class="fas fa-home"></i></h2>
+                <hr>
+                <p>
+                   This page where you'll find all the latest links.
+                </p>
+            </div>
+            <div class="left-home-heading">
+                <h2>Latest News <i class="fas fa-home"></i></h2>
+                <hr>
+                <p>
+                    Up coming articles.
+                </p>
+            </div>
+
+        </div>
+        <div id="right-home">
+            <div class="right-home-heading">
+                <h2>About <i class="fas fa-home"></i></h2>
+                <hr>
+                <p>
+                    About the site and me.
+                </p>
+            </div>
+            <div class="right-home-heading">
+                <h2>All Articles <i class="fas fa-home"></i></h2>
+                <hr>
+                <p>
+                   List of all Articles on the Site.
+                </p>
+            </div>
+        </div>
+        <div id="center-home">
+            <div id="circle-container">
+                <div id="circle-cover-bg"></div>
+            </div>
+        </div>
+    </section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
 </body>
 </html>
