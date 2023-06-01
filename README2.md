@@ -1,4 +1,4 @@
-# My Pojects Website
+# My Projects Website
 
 Primarily this site is developed with the intention of documenting project that I'm interested in and have completed.  It provides an account of what I did to complete the projects and to document any issues experinced along the way.  So often, I complete a project but then later forget how I achieved the result so do it again.  Inevitably, each project has it's own unique obstacles to overcome and almost always requires some tweeking to make it work.
 
