@@ -1,6 +1,6 @@
-/* 
-
 @import url("https://fonts.googleapis.com/css?family=Oswald|Lato:300");
+
+/* >>>>>----------- Global settings */
 
 * {
   margin: 0;
@@ -20,10 +20,13 @@ h2 {
   color: #555555;
 }
 
+/* >>>>>----------- homepage settings */
+
 #Homepage {
-  height: 600px;
+  height: 100%;
 }
 
+/*
 #left-home {
   padding-top: 30px;
   width: 33%;
