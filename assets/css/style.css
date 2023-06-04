@@ -20,13 +20,27 @@ h2 {
   color: #555555;
 }
 
-/* >>>>>----------- homepage settings */
 
+.vertical-center {
+  min-height: 75%;  
+  min-height: 75vh;
+
+  display: flex;
+  align-items: center;
+}
+
+/* >>>>>----------- Navbar settings */
+#nav-main ul li a{
+  color:#8e8c84;
+}
+
+/* >>>>>----------- homepage settings */
+/*
 #Homepage {
   height: 100%;
 }
 
-/*
+
 #left-home {
   padding-top: 30px;
   width: 33%;
@@ -42,12 +56,6 @@ h2 {
 #center-home {
   width: 33%;
   margin: 0 auto;
-}
-
-hr {
-  border-top: 1px solid #777777;
-  width: 100%;
-  margin: 5px 0;
 }
 
 .left-home-heading {
