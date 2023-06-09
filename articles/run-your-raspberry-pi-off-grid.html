@@ -38,7 +38,99 @@
     </header>
     <!-- Header Navbar section -->
     <!-- Main Article section -->
-    <section class="container mt-3 footer-padding"></section>
+    <section class="container mt-3 footer-padding">
+      <h1>
+        Run your Raspberry Pi off-grid with solar power. Here's what you need
+      </h1>
+      <h2>
+        Got enough sun? Here's everything you need to power your outdoor
+        Raspberry Pi project.
+      </h2>
+      <h4>
+        Written by Adrian Kingsley-Hughes, Contributing Writer on May 24, 2023
+      </h4>
+      <p>
+        I'm working on an exciting Raspberry Pi project that requires the
+        single-board computer to operate off-grid for a whole week, while
+        efficiently powering the Pi itself, some low-power environmental
+        sensors, and a 4G cellular/GPS module. Size and weight constraints are
+        not major issues (within reasonable limits), so harnessing solar energy
+        seems like the most logical solution.
+      </p>
+      <p>
+        Initially, I considered connecting a solar panel to a power bank and
+        using that to run the Pi. Although this approach would work, it felt a
+        bit clunky and lacked the reliability necessary for such a demanding
+        project. Moreover, power banks aren't designed to handle solar panel
+        charging effectively due to the fluctuating power from the panel.
+      </p>
+      <p>
+        To ensure a more professional and reliable solution, I needed something
+        equipped with MPPT (maximum power point tracking) functionality. This
+        feature enables the charge controller to optimize energy collection and
+        storage from variable energy sources, such as a solar panel affected by
+        changing weather conditions.
+      </p>
+      <p>That's when I discovered the WaveShare Solar Power Manager.</p>
+      <p>
+        While the one I purchased required three 18650 lithium-ion batteries, I
+        stumbled upon an alternative version with a built-in 10,000mAh
+        lithium-polymer battery pack. This particular device serves as an
+        optimized solar-input power bank that's designed to handle solar
+        charging.
+      </p>
+      <p>And for $35, it's an absolute steal.</p>
+      <p>
+        Determining the required power was an important consideration. A Pi 4
+        consumes approximately 0.5A of power under average loads, which can
+        increase to 1A under heavy loads. This means that a 10,000mAh battery
+        pack can power a Pi 4 for roughly 10 to 20 hours.
+      </p>
+      <p>
+        (For those who are curious about the math, here's how I calculated this.
+        Power bank capacity is measured in mAh [milliamp hours]. So, 10,000mAh
+        is equivalent to 10Ah, meaning the battery pack could sustain a 10A load
+        for about 1 hour or a 1A load for approximately 10 hours. However,
+        real-world efficiency is typically around 80%, so a 10,000mAh power bank
+        would comfortably support a 1A load for at least 8 hours.)
+      </p>
+      <p>
+        But that power consumption is for the Pi 4 alone, and not the sensors
+        and 4G module that need to be factored in. With that in mind, I chose to
+        go with the much more energy-efficient Pi Zero 2 W.
+      </p>
+      <p>
+        The Pi Zero 2 W consumes about 0.1A under average loads and can peak at
+        around 0.4A under heavy loads. This means the 10,000mAh lithium-polymer
+        battery pack will provide an even better runtime for the Pi Zero 2 W,
+        and easily handle the additional load of the environmental sensors and
+        the 4G module.
+      </p>
+      <p>
+        And don't forget: When the sun is shining, the battery inside the
+        WaveShare Solar Power Manager is continually being topped off.
+      </p>
+      <p>Now, let's talk about the solar panel.</p>
+      <p>
+        Because solar panels come in various shapes, sizes, and price ranges,
+        this is where things can get exciting. Personally, I wanted a solar
+        panel that could continuously recharge the batteries while the Raspberry
+        Pi was running and had the added benefit of being waterproof.
+      </p>
+      <p>
+        I happened to have an expensive 5V/10W waterproof Voltaic P110 solar
+        panel lying around unused. However, if you're looking for a more
+        cost-effective option, consider a 5V/6W solar panel designed for
+        powering stick up security cameras.
+      </p>
+      <p>
+        I have tested this setup and successfully ran a Pi 4 continuously for
+        over a week, solely powered by the late spring sun here in the UK, so, I
+        am confident that it will be more than capable of handling a Pi Zero 2 W
+        equipped with sensors and the 4G module.
+      </p>
+      <p>It blows my mind just how well this system works.</p>
+    </section>
     <!-- Main article section -->
     <!-- Footer -->
     <footer

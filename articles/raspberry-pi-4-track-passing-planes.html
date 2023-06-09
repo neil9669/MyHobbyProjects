@@ -38,7 +38,124 @@
     </header>
     <!-- Header Navbar section -->
     <!-- Main Article section -->
-    <section class="container mt-3 footer-padding"></section>
+    <section class="container mt-3 footer-padding">
+      <h1>
+        Raspberry Pi 4: How I built a software-defined radio system to track
+        passing planes
+      </h1>
+      <h2>Build your own ADS-B flight data receiver and mapper.</h2>
+      <h4>Written by Simon Bisson, Contributor on July 6, 2020</h4>
+      <p>
+        One of the things about being in lockdown here in London is that I've
+        had time to work on various projects that have been sat on the back
+        burner. So in the last three months or so, I've set up a much improved
+        microphone and camera system for podcasting and streaming, built a new
+        time-lapse rig for the sky that passes by, practiced my wildlife
+        photography on the local suburban critters, and built and set up a
+        software-defined radio system to track passing aircraft.
+      </p>
+      <p>
+        That last one is perhaps the more interesting for ZDNet's readers, as
+        it's how you can start to feed aircraft location data into a growing
+        network of tracking stations that uses the GPS locations most aircraft
+        transmit to build a global map of air traffic. This approach, ADS-B, is
+        intended to make it easier for aircraft to locate each other and for air
+        traffic control to keep track of them. The fact that the data is there
+        for anyone to capture and use is just a side-effect.
+      </p>
+      <p>
+        Picking up the ADS-B signals is easy enough: they're broadcast on a
+        known frequency, 1090MHz, and have to deliver data in a set format. If
+        you've got the right receiver, that binary data can be quickly
+        translated into coordinates that can be plotted on a map, using
+        callsigns to look up aircraft type and owner. You've probably seen
+        services like Flightradar24 and Flightaware in the news, offering ADS-B
+        information to anyone with a web browser.
+      </p>
+      <p>
+        Those services get their data from a network of volunteers, with their
+        own ADS-B receivers. Usually based around open source software, their
+        base stations are easy enough to build and deploy, using
+        software-defined radios to receive ADS-B signals. Most are based around
+        a popular chipset that was originally developed to add USB digital TV
+        receivers to PCs, with a set of APIs that made it easy to adapt for
+        other uses.
+      </p>
+      <p>
+        Setting up an ADS-B base station is now as easy as getting a Raspberry
+        Pi, plugging in a receiver, and downloading and configuring a
+        ready-to-run system image. My system is based around a 2GB Raspberry Pi
+        4 in a heatsink case, with a Flightaware ADS-B radio stick, a 1090MHz
+        desktop antenna, and a copy of Flightaware's Piaware software
+        distribution.
+      </p>
+      <p>
+        Based on Raspbian, Piaware is a headless Linux distribution with all the
+        software you need to work with a radio stick, including the Dump1090
+        ADS-B Mode S decoder. Dump1090 comes with a built-in web app that maps
+        currently tracked aircraft and can also be used to send data to other
+        apps and servers, helping feed data into larger public ADS-B networks.
+      </p>
+      <p>
+        You can get kits that include all the parts you need to set up and run
+        an ADS-B receiver from hobbyist electronics stores, for around £100
+        (including the Raspberry Pi). The basic antenna that comes with these
+        kits is good for a start, especially if you have a way of getting it
+        outside. You're likely to want to invest in a larger antenna for better,
+        longer range, reception so make sure your budget is ready for an extra
+        £30 to £60, depending on the length of the antenna.
+      </p>
+      <p>
+        Configuring a receiver is easy enough. You'll need your GPS location to
+        4 decimal places, as well as the approximate height of your antenna.
+        You'll also need to configure network connections, either WiFi or wired
+        ethernet. Most of this can be done by editing the configuration files on
+        the Piaware microSD card, letting you treat the whole system as an
+        appliance. With the configuration data in place, you can boot your
+        server and leave it running. I've additionally configured mine to use
+        SSH, so I can log into it from my desktop PC to update Raspbian and the
+        Piaware stack as needed.
+      </p>
+      <p>
+        ADS-B isn't the only way to track aircraft. Not all aircraft, especially
+        the military, transmit their flight data. However most that don't do at
+        least have transponders that broadcast an ID and an altitude on known
+        frequencies. If you have enough receivers in known positions, and enough
+        compute power, you can use basic physics to identify where an aircraft
+        is. This approach is known as multilateration, or, as it's more commonly
+        known, MLAT.
+      </p>
+      <p>
+        If you've got a receiver set up, it's easy enough to join one or more
+        networks to share the signals you receive and help build a live map of
+        aircraft all around the world, providing both ADS-B data and the raw
+        transponder information that can generate MLAT data. In return for your
+        data you'll get access to the networks' subscription services which give
+        better and more detailed outputs than the free commercial services – and
+        of course, without any advertising.
+      </p>
+      <p>
+        I've initially joined two networks, one of the larger public services
+        with nearly 20,000 base stations around the world, and one a private one
+        with a focus on identifying unusual and military aircraft across the UK,
+        and living near the Thames I'm close to a major low-altitude helicopter
+        throughway across London and the city's heliport, where most of the
+        traffic is only trackable via MLAT, as well as under the westbound route
+        into London Heathrow.
+      </p>
+      <p>
+        My antenna is currently taped to the window ledge of the back bedroom,
+        with the Raspberry Pi and receiver on the wall next to the window, using
+        WiFi to connect to the rest of my network and on out to the wider world
+        of ADS-B data. It's seen aircraft as far away as the coast in Norfolk,
+        and tracked military aircraft that are using closed airports for
+        training, as well as the regular RAF and Army helicopter traffic up and
+        down the river, and even the joint flypast by the French and British
+        display teams. It's been an interesting project, and one that looks to
+        keep paying off in the months and years to come, especially when I get
+        that larger antenna fitted.
+      </p>
+    </section>
     <!-- Main article section -->
     <!-- Footer -->
     <footer
