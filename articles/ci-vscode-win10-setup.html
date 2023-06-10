@@ -40,7 +40,15 @@
     <!-- Main Article section -->
     <section class="container mt-3 footer-padding">
       <div>
-        <h2>Preamble</h2>
+        <h1>
+          Code Institute: Having problems with CodeAnywhere after migrating from
+          GitPod?
+        </h1>
+        <h2>
+          Why not create your own local environment with VSCode, WSL2, Docker
+          and the CI code template
+        </h2>
+        <h4>Written by Neil Palmer on June 02, 2023</h4>
         <p>
           This is a quick walkthrough to setup a local development environment
           in Windows, for the Code Institute Diploma in Full Stack Web
@@ -51,10 +59,6 @@
           available online however, it does provide a useful exercise for the
           more adventurous and a 'plan b' should there be any connectivity
           issues.
-        </p>
-        <p>
-          This article will provide the content for my milestone project 1 and
-          is currenly in draft.
         </p>
         <p>
           For the purpose of the course I have installed a clean build of the
@@ -69,62 +73,26 @@
           package manger for windows and all installations can be done from a
           few command lines
         </p>
-        <h2>Prerequistes</h2>
+        <h2>You'll need the following:</h2>
+        <p></p>
+        <ul>
+          <li>Windows 10 pc or laptop with at leaset 8GB of RAM</li>
+          <li>
+            Your GitHub repository URL with CI Template provisioned from
+            https://github.com/Code-Institute-Org/gitpod-full-template
+          </li>
+          <li>Python3</li>
+          <li>
+            Windows Subsystem for Linux - WSL2 is the latest and improved
+            version.
+          </li>
+          <li>VSCode - plus Remote, Docker and git extensions</li>
+        </ul>
         <p>
-          Your GitHub repository URL with CI Template provisioned from
-          <a href="https://github.com/Code-Institute-Org/gitpod-full-template"
-            >https://github.com/Code-Institute-Org/gitpod-full-template</a
-          >
-        </p>
-        <p>
-          Windows Subsystem for Linux - WSL2 is the latest and improved version.
-        </p>
-        <p>Python3</p>
-        <p>VSCode - plus Remote, Docker and git extensions</p>
-        <h2>Let's Do It<br /></h2>
-        <p>
-          Optional step to install to install Chocolately. This can skipped and
-          required applications can be downloaded and installed manually.
-        </p>
-        <p>
-          To install chocolatey open a Powershell terminal as Administrator type
-          the following &gt;:
-        </p>
-        <p>ensure Get-ExecutionPolicy is not Restricted</p>
-        <p>&gt;Get-ExecutionPolicy</p>
-        <p>#INSERT IMAGE</p>
-        <p>if result is Restricted then run</p>
-        <p>&gt;Set-ExecutionPolicy AllSigned</p>
-        <p>#INSERT IMAGE</p>
-        <p>Install Chocolatey with the following command</p>
-        <p>
-          &gt;Set-ExecutionPolicy Bypass -Scope Process -Force;
-          [System.Net.ServicePointManager]::SecurityProtocol =
-          [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex
-          ((New-Object
-          System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-        </p>
-        <p>#INSERT IMAGE</p>
-        <p>
-          More details and apps are available at the website
-          https://community.chocolatey.org/packages
-        </p>
-        <p>
-          You may need to close and re-open Powershell as Administrator if you
-          encounter any errors when trying to install packages.
-        </p>
-        <p>Now install your required applications. Mine is as follows:</p>
-        <p>
-          &gt;choco install firefox googlechrome 7zip teamviewer winscp slack
-          ventoy putty git github-desktop postman -y
-        </p>
-        <p>#INSERT IMAGE</p>
-        <h3>Install WSL</h3>
-        <p>
-          If you are running Windows 10 version 2004 and higher (Build 19041 and
-          higher) or Windows 11, installation is much simpler. I'm using Windows
-          10 Home 22H2 19045.2728 at time of writing. More information can be
-          found at
+          <strong>Install WSL:</strong> If you are running Windows 10 version
+          2004 and higher (Build 19041 and higher) or Windows 11, installation
+          is much simpler. I'm using Windows 10 Home 22H2 19045.2728 at time of
+          writing. More information can be found at
           <a href="https://learn.microsoft.com/en-us/windows/wsl/install"
             >https://learn.microsoft.com/en-us/windows/wsl/install</a
           >
@@ -175,12 +143,12 @@
           />
         </p>
         <p>Version 2 confirms wsl2 is installed</p>
-        <h3>Now install VSCode</h3>
+
         <p>
-          In Powershell as Admistrator type >:<br />
+          <strong>Now install VSCode: </strong> In Powershell as Adminstrator
+          type >:<br /><br />
           <strong>>choco install vscode -y</strong>
         </p>
-        <p>#INSERT IMAGE powershell</p>
         <p>Open VSCode</p>
         <p>
           <img
@@ -261,13 +229,11 @@
           />
         </p>
         <p>Skip the next details or, fill in the form if you prefer.</p>
-        <p>#ADD IMAGE HERE</p>
         <p>
           <br />
           Wait until the Docker engine starts. Be patient, this can take a
           while.
         </p>
-        <p>##ADD IMAGE HERE</p>
         <p>
           Back in VSCode Press ctrl shift and p again and select<strong
             >Dev containers: clone repository in container volume</strong
@@ -283,7 +249,6 @@
           complete. When complete hit the + symbol next to Dev containers to add
           a Bash shell. Here you can add git commands just like in GitPod.
         </p>
-        <p>#ADD IMAGE HERE</p>
         <p>
           Try the <strong>python3 -m http.server</strong> command. This time you
           page opens in a localhost browser.
